@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "My Extension",
+    "version": "1.0",
+    "description": "My Extension",
+    "content_scripts":[
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["scripts/outline.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "action":{
+        "default_popup": "pop.html"
+    },
+    "permissions": [
+        "storage"
+    ]
+
+}
